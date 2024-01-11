@@ -2576,6 +2576,16 @@ input, select, textarea {
 			line-height: 1.5em;
 			margin: 0;
 		}
+		
+		.work-item-intro {
+			align-items: center;
+			justify-content: center;
+		}
+
+		.work-item-intro img {
+			max-width: 100%; /* Ensure the image doesn't exceed the container width */
+			max-height: 100%; /* Maintain the image's aspect ratio */
+		}
 
 /* Header */
 
@@ -2694,9 +2704,9 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			border-top: solid 2px #b7c9d3;
+			margin: 2em 0 0 0;
+			padding: 2em 0 0 0;
 		}
 
 			#main > section:first-child {
