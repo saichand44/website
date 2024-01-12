@@ -28,6 +28,13 @@
 			.linespace {
 				line-height: 1.2;
 			}
+
+			/* Define the linespace between the lines*/
+			.lineseparator{
+				border-bottom: dashed 0.1px #b7c9d3;
+				padding-bottom: 5px;
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -39,8 +46,14 @@
 					<h1>Hi!<br />
 					I am Sai Chand<br />
 					<div class="linespace">
-						<span class="intro-font1">Interests: </span><span class="intro-font2">Computer Vision, Perception</span><br />
-						<span class="intro-font1">Education: </span><span class="intro-font2">Master's in Robotics @ UPenn</span><br />
+						<div class="lineseparator">
+							<span class="intro-font2">Interests: </span><span class="intro-font2">Computer Vision, Perception</span><br />
+						</div>
+						<div class="lineseparator">
+							<a class="icon solid fa-graduation-cap" style="font-size:18px"></a> <span class="intro-font2">Master's in Robotics @ UPenn</span><br />
+							<a class="icon solid fa-graduation-cap" style="font-size:18px"></a> <span class="intro-font2">Bachelor's @ IIT Kharagpur</span><br />
+						</div>
+						<span class="intro-font2"><strong>Looking for co-op & internships for Summer 2024 and beyond!</strong></span><br />
 						<span class="intro-font2">Explore my resume by clicking here!! &#x1F449; </span><a href="https://drive.google.com/file/d/17jsnyzD5Za4dLol5ZFzXLIaoREiFCWas/view?usp=sharing" target="_blank"><span class="intro-font2">link</span></a><br />
 					</div>
 			</header>
@@ -53,9 +66,11 @@
 						<header class="major">
 							<h2>About Me</h2>
 						</header>
-						<p>I am currently pursuing my Master's degree in Robotics at the University of Pennsylvania. I am interested in the fields of Computer Vision and Perception. My experience in these fields include working on Structure from Motion (SfM), Optical Flow, Camera Pose Estimation, Epipolar Geometry, Projective Geometry, NeRFs and extracting key features in images.<br />
+						<p style="text-align: justify;">I am currently pursuing my Master's degree in Robotics at the <a href="https://www.upenn.edu/" target="_blank"><span>University of Pennsylvania.</span></a> I am interested in the fields of Computer Vision and Perception. My experience spans diverse areas within these fields, working on projects related to Structure from Motion (SfM), Optical Flow, Camera Pose Estimation, Epipolar Geometry, Projective Geometry, NeRFs and extracting key features in images.<br />
 						   <br />
-						   Previously, I worked at AIRBUS as a Multibody Simulation specialist, with focus on building MBS models using script-based modeling techniques. I had the privilege of contributing to projects involving prominent aircraft such as A350, A321 and next-generation aircraft<br />
+						   Previously, I worked at <a href="https://www.airbus.com/en" target="_blank"><span>AIRBUS</span></a> as a Multibody Simulation specialist, with a focus on building MBS models using script-based modeling techniques, comparing results between MBS models and physical test campaigns. I had the privilege of contributing to projects involving prominent aircraft such as the A350, A321 and next-generation aircraft.<br />
+						   <br />
+						   I am an ardent follower of Formula 1 and Soccer. Throughout my undergraduate studies at the <a href="https://www.iitkgp.ac.in/" target="_blank"><span>Indian Institute of Technology Kharagpur</span></a>, I spent a great deal of time actively contributing to the <a href="https://www.imeche.org/events/formula-student" target="_blank"><span>Formula Student</span></a> racecar project at <a href="https://teamkart.org/" target="_blank"><span>TeamKART</span></a>, where I led the Vehicle Dynamics team.<br />
 						   <br />
 						   Here's a quick overview of my career so far!</p>
 							<article class="col-6 col-12-xsmall work-item-intro">
@@ -75,32 +90,32 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/AR_full.gif" class="image fit thumb"><img src="images/thumbs/AR_thumb.gif" alt="" /></a>
 								<h3>Augmented Reality</h3>
-								<p style="text-align: justify;">Overlaying virtual objects in the real world where the users can choose the location the virtual objects at the start of the sequence. The position and orientation of virtual objects is updated as camera moves / rotates. The camera pose is estimated using AprilTags and P3P / PnP algorithms</p>
+								<p style="text-align: justify;">Seamless integration of virtual objects into the real-world scene where users can choose the initial placement of virtual objects. As the camera moves and/or rotates, the position and orientation of virtual objects dynamically update. The camera pose in every frame is estimated using AprilTags and P3P / PnP algorithms</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/3D_reconstruction_full.gif" class="image fit thumb"><img src="images/thumbs/3D_reconstruction_thumb.gif" alt="" /></a>
 								<h3>3D-Reconstruction</h3>
-								<p>Generating a point cloud that resembles the 3D geometry of the object using two-view stereo algorithm. This algorithm converts multiple 2D view points to 3D reconstruction. Keypoint correspondences are computed using disparity map between the given pair of 2D images</p>
+								<p style="text-align: justify;">Generating a point cloud that resembles the 3D geometry of the object using a two-view stereo algorithm. This algorithm takes in pixels from two images at a time and converts them to 3D points. Keypoint correspondences are computed using a disparity map between the given pair of 2D images</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/nerf_full.gif" class="image fit thumb"><img src="images/thumbs/nerf_thumb.gif" alt="" /></a>
 								<h3>Neural Radiance Fields (NeRFs)</h3>
-								<p>Synthesizing novel views of a given scene using a fully-connected deep network trained on set of images with known camera poses. The network takes in spatial location and viewing direction and outputs the volume density and view-dependent emitted radiance at that spatial location</p>
+								<p style="text-align: justify;">Synthesizing novel views of a given scene using a fully-connected neural network trained on set of images with known camera poses. The network takes in spatial location and viewing direction and outputs the volume density and view-dependent emitted radiance at that spatial location</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/detect_track_full.gif" class="image fit thumb"><img src="images/thumbs/detect_track_thumb.gif" alt="" /></a>
 								<h3>Object Detection and Tracking</h3>
-								<p>Detecting moving objects in a video sequence using YOLOv3. YOLOv3 neural network model was trained using COCO dataset. Object tracking is implemented using DeepSORT. It uses feature descriptors from FaceNet to assosiate detections of same object across different time frames</p>
+								<p style="text-align: justify;">Detecting moving objects in a video sequence using YOLOv3. The YOLOv3 model was trained using COCO dataset. Object tracking is implemented using DeepSORT. It uses feature descriptors from the FaceNet model to associate detections of the same object across different time frames</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/detections_full.gif" class="image fit thumb"><img src="images/thumbs/detections_thumb.gif" alt="" /></a>
 								<h3>Object Detection</h3>
-								<p>Detecting football players and football in a video clip using OpenCV library and traditional image processing techniques such as masking, morphological transformations, edge detection, Hough transformations. Used homography matrix to project players, football to bird's eye view. </p>
+								<p style="text-align: justify;">Detecting football players and football in a video clip using OpenCV library and traditional image processing techniques such as masking, morphological transformations, edge detection, Hough transformations. Used homography matrix to project players, football to bird's eye view. </p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/fulls/pick_and_place_full.gif" class="image fit thumb"><img src="images/thumbs/pick_and_place_thumb.gif" alt="" /></a>
 								<h3>Pick and Place Challenge</h3>
-								<p>Controlling a 7 DOF Franka-Emika Panda robot using Positional Inverse Kinematics approach. Objective is to stack blocks by picking them from static and moving platforms. Our team successfully stacked 7 blocks (4 static and 3 dynamic) and stood second out of the 20 teams particiapted!</p>
+								<p style="text-align: justify;">Controlling a 7 DOF Franka-Emika Panda robot using a Positional Inverse Kinematics approach. Objective is to stack blocks by picking them from static and moving platforms. Our team successfully stacked 7 blocks (4 static and 3 dynamic) and stood second out of the 20 teams participated!</p>
 							</article>
 						</div>
 						<!-- <ul class="actions">
@@ -113,7 +128,7 @@
 						<header class="major">
 							<h2>Get In Touch</h2>	
 						</header>
-						<p>Please feel free to contact me. Click on the email to redirect to your email platform!</p>
+						<p>Whether it's a collaboration idea or just to say hello, I will be glad to hear from you. Click on the email to redirect to your email platform!</p>
 						<div class="row">
 							<!--<div class="col-8 col-12-small">
 								<form method="post" action="">
