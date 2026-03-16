@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sai Chand Gubbala</title>
+    <title>Blogs — Sai Chand Gubbala</title>
 
-    <!-- Fonts: Inter — clean, Apple-inspired sans-serif -->
+    <!-- Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- FontAwesome (existing asset) -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="src/styles/globals.css" />
     <link rel="stylesheet" href="src/styles/sections.css" />
+    <link rel="stylesheet" href="src/styles/blogs.css" />
   </head>
 
   <body>
@@ -24,16 +25,11 @@
     <div id="app"></div>
 
     <!-- Scripts -->
-    <script src="src/animations/animationFactory.js"></script>
-    <script src="src/animations/geometricWireframe.js"></script>
     <script src="src/scripts/pageBuilder.js"></script>
     <script>
       PageBuilder.build('app', [
-        'src/components/navbar.html',
-        'src/components/hero.html',
-        'src/components/experience.html',
-        'src/components/projects.html',
-        'src/components/contact.html',
+        'src/components/navbar-blog.html',
+        'src/components/blog-content.html',
         'src/components/footer.html'
       ]);
     </script>

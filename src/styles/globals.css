@@ -1,0 +1,142 @@
+/* ============================================
+   globals.css — CSS Variables + Base Styles
+   ============================================ */
+
+:root {
+  /* --- Light theme (default) — Stormy Morning --- */
+  --color-bg:          #ECEFF1;
+  --color-bg-elevated: #E0E4E8;
+  --color-bg-card:     #ffffff;
+  --color-surface:     #D6DBE0;
+  --color-accent:      #5D8AA8;
+  --color-accent-dim:  rgba(93, 138, 168, 0.1);
+  --color-text:        #596275;
+  --color-text-muted:  #7A8694;
+  --color-text-bright: #2C3E50;
+  --color-border:      rgba(44, 62, 80, 0.1);
+  --color-nav-bg:      rgba(236, 239, 241, 0.85);
+  --color-hero-gradient-1: rgba(93, 138, 168, 0.06);
+  --color-hero-gradient-2: rgba(44, 62, 80, 0.04);
+
+  /* --- Typography — Apple-inspired clean sans-serif --- */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* --- Spacing --- */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  6rem;
+  --space-2xl: 8rem;
+
+  /* --- Sizing --- */
+  --max-width: 1400px;
+  --nav-height: 52px;
+
+  /* --- Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-base: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-slow: 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* --- Dark theme (toggled via data attribute on <html>) --- */
+[data-theme="dark"] {
+  --color-bg:          #1a1f2b;
+  --color-bg-elevated: #212733;
+  --color-bg-card:     #272e3a;
+  --color-surface:     #2e3542;
+  --color-accent:      #7BADC4;
+  --color-accent-dim:  rgba(123, 173, 196, 0.12);
+  --color-text:        #ABB7C2;
+  --color-text-muted:  #7A8694;
+  --color-text-bright: #ECEFF1;
+  --color-border:      rgba(171, 183, 194, 0.1);
+  --color-nav-bg:      rgba(26, 31, 43, 0.88);
+  --color-hero-gradient-1: rgba(93, 138, 168, 0.08);
+  --color-hero-gradient-2: rgba(44, 62, 80, 0.06);
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Subtle grain texture overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-text-bright);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-bright);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --- Utility --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* --- Scroll fade-in animation (applied via JS) --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
