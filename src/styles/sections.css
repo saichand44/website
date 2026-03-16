@@ -139,6 +139,19 @@
   width: 100%;
 }
 
+.hero__wip-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  border-radius: 980px;
+  margin-bottom: var(--space-sm);
+}
+
 .hero__avatar {
   width: 120px;
   height: 120px;
